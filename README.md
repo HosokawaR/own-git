@@ -1,8 +1,9 @@
-WIP
 
 # Own Git
 
 This is an (incomplete) reproduction implementation of Git in TypeScript on Deno.
+
+https://github.com/HosokawaR/own-git/assets/45098934/01e4951b-b073-4e34-8866-7638be3480e2
 
 ## Features
 
@@ -27,27 +28,29 @@ git clone https://github.com/HosokawaR/own-git
 cd own-git
 mkdir _sand && cd _sand
 
+export PLANE_MODE=true
+
 # Initialize
-PLANE_MODE=true deno run -A ../index.ts init
+deno run -A ../index.ts init
 
 # some file
 echo "Hello" > README.md
 
 # Add
-PLANE_MODE=true deno run -A ../index.ts add README.md
+deno run -A ../index.ts add README.md
 
 # Commit
-PLANE_MODE=true deno run -A ../index.ts commit -m "1st"
+deno run -A ../index.ts commit -m "1st"
 
 # modify file
 echo "World!!" > README.md
 
 # Add
-PLANE_MODE=true deno run -A ../index.ts add README.md
+deno run -A ../index.ts add README.md
 
 # Log
-PLANE_MODE=true deno run -A ../index.ts log
+deno run -A ../index.ts log
 
 # Checkout
-PLANE_MODE=true deno run -A ../index.ts checkout <commit SHA>
+deno run -A ../index.ts checkout <commit SHA>
 ```
